@@ -89,5 +89,10 @@ namespace Dieu_voit_tout
             BtnStock.BackColor = defaultButtonBg;
             BtnVente.BackColor = defaultButtonBg;
         }
+
+        private void FrmMainPage_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

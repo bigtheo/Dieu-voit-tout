@@ -16,5 +16,10 @@ namespace Dieu_voit_tout
         {
             InitializeComponent();
         }
+
+        private void BtnNouveau_Click(object sender, EventArgs e)
+        {
+            new FrmFacturation().ShowDialog();
+        }
     }
 }

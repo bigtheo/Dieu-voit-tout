@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Dieu_voit_tout.Common;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,17 @@ namespace Dieu_voit_tout
         public FrmArticle()
         {
             InitializeComponent();
+        }
+
+        private void BtnNouveau_Click(object sender, EventArgs e)
+        {
+            new FrmNewArticle().ShowDialog();
+        }
+
+        private void FrmArticle_Load(object sender, EventArgs e)
+        {
+            Article article = new Article();
+            dgvListe.DataSource = article.GetTable();
         }
     }
 }

@@ -30,14 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMainPage));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.BtnArticle = new System.Windows.Forms.Button();
-            this.BtnStock = new System.Windows.Forms.Button();
-            this.BtnVente = new System.Windows.Forms.Button();
-            this.BtnRapports = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
+            this.BtnRapports = new System.Windows.Forms.Button();
+            this.BtnVente = new System.Windows.Forms.Button();
+            this.BtnStock = new System.Windows.Forms.Button();
+            this.BtnArticle = new System.Windows.Forms.Button();
             this.panelContainer = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -60,65 +60,34 @@
             this.panel1.Size = new System.Drawing.Size(202, 574);
             this.panel1.TabIndex = 0;
             // 
-            // BtnArticle
+            // panel2
             // 
-            this.BtnArticle.FlatAppearance.BorderSize = 0;
-            this.BtnArticle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnArticle.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnArticle.Image = ((System.Drawing.Image)(resources.GetObject("BtnArticle.Image")));
-            this.BtnArticle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnArticle.Location = new System.Drawing.Point(22, 152);
-            this.BtnArticle.Name = "BtnArticle";
-            this.BtnArticle.Size = new System.Drawing.Size(161, 43);
-            this.BtnArticle.TabIndex = 0;
-            this.BtnArticle.Text = "Article";
-            this.BtnArticle.UseVisualStyleBackColor = true;
-            this.BtnArticle.Click += new System.EventHandler(this.BtnArticle_Click);
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.panel2.Location = new System.Drawing.Point(23, 488);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(148, 1);
+            this.panel2.TabIndex = 8;
             // 
-            // BtnStock
+            // pictureBox1
             // 
-            this.BtnStock.FlatAppearance.BorderSize = 0;
-            this.BtnStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnStock.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnStock.Image = ((System.Drawing.Image)(resources.GetObject("BtnStock.Image")));
-            this.BtnStock.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnStock.Location = new System.Drawing.Point(22, 214);
-            this.BtnStock.Name = "BtnStock";
-            this.BtnStock.Size = new System.Drawing.Size(161, 43);
-            this.BtnStock.TabIndex = 1;
-            this.BtnStock.Text = "Stock";
-            this.BtnStock.UseVisualStyleBackColor = true;
-            this.BtnStock.Click += new System.EventHandler(this.BtnStock_Click);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(59, 28);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(74, 56);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
             // 
-            // BtnVente
+            // label1
             // 
-            this.BtnVente.FlatAppearance.BorderSize = 0;
-            this.BtnVente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnVente.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnVente.Image = ((System.Drawing.Image)(resources.GetObject("BtnVente.Image")));
-            this.BtnVente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnVente.Location = new System.Drawing.Point(22, 273);
-            this.BtnVente.Name = "BtnVente";
-            this.BtnVente.Size = new System.Drawing.Size(161, 43);
-            this.BtnVente.TabIndex = 2;
-            this.BtnVente.Text = "Vente";
-            this.BtnVente.UseVisualStyleBackColor = true;
-            this.BtnVente.Click += new System.EventHandler(this.BtnVente_Click);
-            // 
-            // BtnRapports
-            // 
-            this.BtnRapports.FlatAppearance.BorderSize = 0;
-            this.BtnRapports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnRapports.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnRapports.Image = ((System.Drawing.Image)(resources.GetObject("BtnRapports.Image")));
-            this.BtnRapports.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnRapports.Location = new System.Drawing.Point(22, 336);
-            this.BtnRapports.Name = "BtnRapports";
-            this.BtnRapports.Size = new System.Drawing.Size(161, 43);
-            this.BtnRapports.TabIndex = 3;
-            this.BtnRapports.Text = "Rapports";
-            this.BtnRapports.UseVisualStyleBackColor = true;
-            this.BtnRapports.Click += new System.EventHandler(this.BtnRapports_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(30, 97);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(141, 22);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Dieu voit Software";
             // 
             // button6
             // 
@@ -135,34 +104,65 @@
             this.button6.Text = "Settings";
             this.button6.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // BtnRapports
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(30, 97);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(141, 22);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Dieu voit Software";
+            this.BtnRapports.FlatAppearance.BorderSize = 0;
+            this.BtnRapports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnRapports.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnRapports.Image = ((System.Drawing.Image)(resources.GetObject("BtnRapports.Image")));
+            this.BtnRapports.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnRapports.Location = new System.Drawing.Point(22, 336);
+            this.BtnRapports.Name = "BtnRapports";
+            this.BtnRapports.Size = new System.Drawing.Size(161, 43);
+            this.BtnRapports.TabIndex = 3;
+            this.BtnRapports.Text = "Rapports";
+            this.BtnRapports.UseVisualStyleBackColor = true;
+            this.BtnRapports.Click += new System.EventHandler(this.BtnRapports_Click);
             // 
-            // pictureBox1
+            // BtnVente
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(59, 28);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(74, 56);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
+            this.BtnVente.FlatAppearance.BorderSize = 0;
+            this.BtnVente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnVente.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnVente.Image = ((System.Drawing.Image)(resources.GetObject("BtnVente.Image")));
+            this.BtnVente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnVente.Location = new System.Drawing.Point(22, 273);
+            this.BtnVente.Name = "BtnVente";
+            this.BtnVente.Size = new System.Drawing.Size(161, 43);
+            this.BtnVente.TabIndex = 2;
+            this.BtnVente.Text = "Vente";
+            this.BtnVente.UseVisualStyleBackColor = true;
+            this.BtnVente.Click += new System.EventHandler(this.BtnVente_Click);
             // 
-            // panel2
+            // BtnStock
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.panel2.Location = new System.Drawing.Point(23, 488);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(148, 1);
-            this.panel2.TabIndex = 8;
+            this.BtnStock.FlatAppearance.BorderSize = 0;
+            this.BtnStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnStock.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnStock.Image = ((System.Drawing.Image)(resources.GetObject("BtnStock.Image")));
+            this.BtnStock.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnStock.Location = new System.Drawing.Point(22, 214);
+            this.BtnStock.Name = "BtnStock";
+            this.BtnStock.Size = new System.Drawing.Size(161, 43);
+            this.BtnStock.TabIndex = 1;
+            this.BtnStock.Text = "Stock";
+            this.BtnStock.UseVisualStyleBackColor = true;
+            this.BtnStock.Click += new System.EventHandler(this.BtnStock_Click);
+            // 
+            // BtnArticle
+            // 
+            this.BtnArticle.FlatAppearance.BorderSize = 0;
+            this.BtnArticle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnArticle.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnArticle.Image = ((System.Drawing.Image)(resources.GetObject("BtnArticle.Image")));
+            this.BtnArticle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnArticle.Location = new System.Drawing.Point(22, 152);
+            this.BtnArticle.Name = "BtnArticle";
+            this.BtnArticle.Size = new System.Drawing.Size(161, 43);
+            this.BtnArticle.TabIndex = 0;
+            this.BtnArticle.Text = "Article";
+            this.BtnArticle.UseVisualStyleBackColor = true;
+            this.BtnArticle.Click += new System.EventHandler(this.BtnArticle_Click);
             // 
             // panelContainer
             // 
@@ -185,6 +185,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu principal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmMainPage_FormClosing);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
