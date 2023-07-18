@@ -12,8 +12,8 @@ namespace Dieu_voit_tout
 {
     public partial class FrmMainPage : Form
     {
-        private Color defaultButtonBg = Color.FromArgb(245, 245, 245);
-        private Color activeButtonBg = Color.FromArgb(220, 220, 220);
+        private readonly Color defaultButtonBg = Color.FromArgb(245, 245, 245);
+        private readonly Color activeButtonBg = Color.FromArgb(220, 220, 220);
         private Form activeForm;
 
         public FrmMainPage()
@@ -45,7 +45,7 @@ namespace Dieu_voit_tout
         {
 
             BtnArticle.BackColor=activeButtonBg;
-
+            OuvrirFormulaire(new FrmArticle());
             //others bouton
 
             BtnStock.BackColor=defaultButtonBg ;
@@ -57,7 +57,7 @@ namespace Dieu_voit_tout
         {
 
            BtnStock.BackColor = activeButtonBg;
-
+            OuvrirFormulaire(new FrmStock());
             //others bouton
 
             BtnArticle.BackColor = defaultButtonBg;
@@ -82,7 +82,7 @@ namespace Dieu_voit_tout
         private void BtnRapports_Click(object sender, EventArgs e)
         {
             BtnRapports.BackColor = activeButtonBg;
-
+            OuvrirFormulaire(new FrmRapports());
             //others bouton
 
             BtnArticle.BackColor = defaultButtonBg;

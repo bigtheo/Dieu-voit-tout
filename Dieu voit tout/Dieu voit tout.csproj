@@ -78,6 +78,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connexion.cs" />
+    <Compile Include="FrmArticle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmArticle.Designer.cs">
+      <DependentUpon>FrmArticle.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +96,24 @@
     <Compile Include="FrmMainPage.Designer.cs">
       <DependentUpon>FrmMainPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmParametres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmParametres.Designer.cs">
+      <DependentUpon>FrmParametres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRapports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRapports.Designer.cs">
+      <DependentUpon>FrmRapports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStock.Designer.cs">
+      <DependentUpon>FrmStock.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmVente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,11 +122,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmArticle.resx">
+      <DependentUpon>FrmArticle.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMainPage.resx">
       <DependentUpon>FrmMainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmParametres.resx">
+      <DependentUpon>FrmParametres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRapports.resx">
+      <DependentUpon>FrmRapports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStock.resx">
+      <DependentUpon>FrmStock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmVente.resx">
       <DependentUpon>FrmVente.cs</DependentUpon>
