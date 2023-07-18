@@ -21,12 +21,20 @@ namespace Dieu_voit_tout
         {
             if (Connexion.Connecter())
             {
-                MessageBox.Show("Connexion réussie");
+                this.Hide();
+                new FrmMainPage().Show();
+
+                
             }
             else
             {
                 MessageBox.Show("Echec de connexion");
             }
+        }
+
+        private void BtnFermer_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

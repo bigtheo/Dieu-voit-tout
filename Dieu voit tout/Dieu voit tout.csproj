@@ -78,11 +78,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connexion.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmMainPage.cs">
       <SubType>Form</SubType>
@@ -90,10 +90,22 @@
     <Compile Include="FrmMainPage.Designer.cs">
       <DependentUpon>FrmMainPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmVente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVente.Designer.cs">
+      <DependentUpon>FrmVente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMainPage.resx">
+      <DependentUpon>FrmMainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmVente.resx">
+      <DependentUpon>FrmVente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

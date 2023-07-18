@@ -31,12 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             this.textBoxExt1 = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxExt2 = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             this.BtnConnection = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
+            this.BtnFermer = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxExt1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxExt2)).BeginInit();
@@ -54,28 +54,25 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+            this.panel1.Controls.Add(this.BtnFermer);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(417, 65);
+            this.panel1.Size = new System.Drawing.Size(433, 65);
             this.panel1.TabIndex = 1;
             // 
-            // button1
+            // label3
             // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(350, 5);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(54, 55);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "X";
-            this.button1.UseVisualStyleBackColor = true;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(26, 14);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(66, 30);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Login";
             // 
             // label1
             // 
@@ -101,8 +98,10 @@
             this.textBoxExt2.Location = new System.Drawing.Point(45, 209);
             this.textBoxExt2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxExt2.Name = "textBoxExt2";
+            this.textBoxExt2.PasswordChar = '●';
             this.textBoxExt2.Size = new System.Drawing.Size(320, 29);
-            this.textBoxExt2.TabIndex = 3;
+            this.textBoxExt2.TabIndex = 2;
+            this.textBoxExt2.UseSystemPasswordChar = true;
             // 
             // BtnConnection
             // 
@@ -110,32 +109,36 @@
             this.BtnConnection.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnConnection.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnConnection.ForeColor = System.Drawing.Color.White;
-            this.BtnConnection.Location = new System.Drawing.Point(45, 262);
+            this.BtnConnection.Location = new System.Drawing.Point(130, 262);
             this.BtnConnection.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BtnConnection.Name = "BtnConnection";
-            this.BtnConnection.Size = new System.Drawing.Size(320, 41);
-            this.BtnConnection.TabIndex = 5;
+            this.BtnConnection.Size = new System.Drawing.Size(147, 41);
+            this.BtnConnection.TabIndex = 3;
             this.BtnConnection.Text = "Connecter";
             this.BtnConnection.UseVisualStyleBackColor = false;
             this.BtnConnection.Click += new System.EventHandler(this.BtnConnection_Click);
             // 
-            // label3
+            // BtnFermer
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(26, 14);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 30);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Login";
+            this.BtnFermer.FlatAppearance.BorderSize = 0;
+            this.BtnFermer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnFermer.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnFermer.ForeColor = System.Drawing.Color.White;
+            this.BtnFermer.Location = new System.Drawing.Point(377, 14);
+            this.BtnFermer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.BtnFermer.Name = "BtnFermer";
+            this.BtnFermer.Size = new System.Drawing.Size(43, 39);
+            this.BtnFermer.TabIndex = 101;
+            this.BtnFermer.Text = "X";
+            this.BtnFermer.UseVisualStyleBackColor = true;
             // 
             // FrmLogin
             // 
+            this.AcceptButton = this.BtnConnection;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(417, 367);
+            this.ClientSize = new System.Drawing.Size(433, 345);
             this.Controls.Add(this.BtnConnection);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxExt2);
@@ -162,12 +165,12 @@
 
         private Syncfusion.Windows.Forms.Tools.TextBoxExt textBoxExt1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private Syncfusion.Windows.Forms.Tools.TextBoxExt textBoxExt2;
         private System.Windows.Forms.Button BtnConnection;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button BtnFermer;
     }
 }
 
