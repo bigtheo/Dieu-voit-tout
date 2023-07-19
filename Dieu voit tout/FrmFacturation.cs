@@ -1,4 +1,4 @@
-﻿using Dieu_voit_tout.Common;
+﻿using Helper.Common;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Dieu_voit_tout
+namespace Helper
 {
     public partial class FrmFacturation : Form
     {

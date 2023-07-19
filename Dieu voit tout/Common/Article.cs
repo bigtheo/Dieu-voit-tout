@@ -3,7 +3,7 @@ using System;
 using System.Data;
 using System.Windows.Forms;
 
-namespace Dieu_voit_tout.Common
+namespace Helper.Common
 {
     public class Article
     {

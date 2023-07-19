@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Dieu_voit_tout
+namespace Helper
 {
     public partial class FrmLogin : Form
     {
@@ -16,6 +16,8 @@ namespace Dieu_voit_tout
         {
             InitializeComponent();
         }
+
+        public static object Login { get; internal set; }
 
         private void BtnConnection_Click(object sender, EventArgs e)
         {

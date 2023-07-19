@@ -36,12 +36,20 @@
     <ApplicationIcon>icons8_return_purchase_1.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="MySqlBackupNet.MySqlConnector, Version=2.3.8.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySqlBackup.NET.MySqlConnector.2.3.8\lib\net471\MySqlBackupNet.MySqlConnector.dll</HintPath>
+    </Reference>
     <Reference Include="MySqlConnector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=d33d3e53aa5f8c92, processorArchitecture=MSIL">
       <HintPath>..\packages\MySqlConnector.2.2.5\lib\net471\MySqlConnector.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.Core.WinForms, Version=20.3460.0.47, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
     <Reference Include="Syncfusion.Data.WinForms, Version=20.3460.0.47, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
     <Reference Include="Syncfusion.GridCommon.WinForms, Version=20.3460.0.47, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Pdf.Base, Version=20.3460.0.47, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.PdfViewer.Windows, Version=20.3460.0.47, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
     <Reference Include="Syncfusion.SfBarcode.Windows, Version=20.3460.0.47, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
     <Reference Include="Syncfusion.SfDataGrid.WinForms, Version=20.3460.0.47, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
     <Reference Include="Syncfusion.SfInput.WinForms, Version=20.3460.0.47, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
@@ -52,7 +60,12 @@
       <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
     </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Configuration.ConfigurationManager.7.0.0\lib\net462\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
     <Reference Include="System.Design" />
     <Reference Include="System.Diagnostics.DiagnosticSource, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Diagnostics.DiagnosticSource.6.0.0\lib\net461\System.Diagnostics.DiagnosticSource.dll</HintPath>
@@ -61,6 +74,7 @@
     <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
     </Reference>
+    <Reference Include="System.Net" />
     <Reference Include="System.Numerics" />
     <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
@@ -70,6 +84,17 @@
     </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.AccessControl, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.AccessControl.6.0.0\lib\net461\System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Permissions, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Permissions.7.0.0\lib\net462\System.Security.Permissions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
@@ -83,10 +108,35 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common\Article.cs" />
+    <Compile Include="Common\Order.cs" />
     <Compile Include="Connexion.cs" />
+    <Compile Include="Core\Models\Abonnes.cs" />
+    <Compile Include="Core\Models\Accompte.cs" />
+    <Compile Include="Core\Models\Client.cs" />
+    <Compile Include="Core\Models\Dépenses.cs" />
+    <Compile Include="Core\Models\Facture.cs" />
+    <Compile Include="Core\Models\FactureDetailsBoutique.cs" />
+    <Compile Include="Core\Models\FactureDetailsPressing.cs" />
+    <Compile Include="Core\Models\Observation.cs" />
+    <Compile Include="Core\Models\Product.cs" />
+    <Compile Include="Core\Models\Reduction.cs" />
+    <Compile Include="Core\Models\Retrait.cs" />
+    <Compile Include="Core\Models\Stock.cs" />
+    <Compile Include="Core\Models\Tarif.cs" />
+    <Compile Include="Core\Models\Users.cs" />
+    <Compile Include="Core\Printing\FactureDocument.cs" />
+    <Compile Include="FrmApercuAvantImpression.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmApercuAvantImpression.Designer.cs">
+      <DependentUpon>FrmApercuAvantImpression.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Printing\PdfDocument.cs" />
+    <Compile Include="Core\Printing\RapportDocument.cs" />
     <Compile Include="FrmArticle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,8 +191,21 @@
     <Compile Include="FrmVente.Designer.cs">
       <DependentUpon>FrmVente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helper\Config.cs" />
+    <Compile Include="Helper\Connexion.cs" />
+    <Compile Include="FrmParametre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmParametre.Designer.cs">
+      <DependentUpon>FrmParametre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\Helper.cs" />
+    <Compile Include="Helper\IteHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmApercuAvantImpression.resx">
+      <DependentUpon>FrmApercuAvantImpression.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmArticle.resx">
       <DependentUpon>FrmArticle.cs</DependentUpon>
     </EmbeddedResource>

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Dieu_voit_tout
+namespace Helper
 {
     public class Connexion
     {

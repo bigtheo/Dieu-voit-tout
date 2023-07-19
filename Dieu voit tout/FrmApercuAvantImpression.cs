@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Helper
+namespace Helper.Core.Printing
 {
-    public partial class FrmParametres : Form
+    public partial class FrmApercuAvantImpression : Form
     {
-        public FrmParametres()
+        public FrmApercuAvantImpression()
         {
             InitializeComponent();
         }

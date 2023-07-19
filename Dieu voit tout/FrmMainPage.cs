@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Dieu_voit_tout
+namespace Helper
 {
     public partial class FrmMainPage : Form
     {

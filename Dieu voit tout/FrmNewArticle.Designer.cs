@@ -1,4 +1,4 @@
-﻿namespace Dieu_voit_tout
+﻿namespace Helper
 {
     partial class FrmNewArticle
     {
