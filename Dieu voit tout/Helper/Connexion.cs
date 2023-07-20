@@ -1,10 +1,9 @@
 ﻿
-using Lady_Miriam;
 using MySqlConnector;
 using System;
 using System.Windows.Forms;
 
-namespace Helper.Helper
+namespace Dieu_voit_tout.Helper
 {
     //ouvre la connexion à la base de donnée
     public static class Connexion

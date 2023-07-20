@@ -1,4 +1,4 @@
-﻿namespace Helper
+﻿namespace Dieu_voit_tout
 {
     partial class FrmFacturation
     {
@@ -40,18 +40,18 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txt_client = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             this.BtnAdd = new System.Windows.Forms.Button();
-            this.dgvListe = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
             this.txt_telephone = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             this.lbl_total_general = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.BtnImprimer = new System.Windows.Forms.Button();
+            this.dgvListe = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.txt_code)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_designation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_prix_unitaire)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_quantite)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_client)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_telephone)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListe)).BeginInit();
             this.SuspendLayout();
             // 
             // label5
@@ -164,15 +164,6 @@
             this.BtnAdd.UseVisualStyleBackColor = true;
             this.BtnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
-            // dgvListe
-            // 
-            this.dgvListe.BackgroundColor = System.Drawing.Color.White;
-            this.dgvListe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListe.Location = new System.Drawing.Point(53, 218);
-            this.dgvListe.Name = "dgvListe";
-            this.dgvListe.Size = new System.Drawing.Size(791, 321);
-            this.dgvListe.TabIndex = 22;
-            // 
             // label6
             // 
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -202,20 +193,32 @@
             this.lbl_total_general.TabIndex = 25;
             this.lbl_total_general.Text = "0";
             // 
-            // button1
+            // BtnImprimer
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(656, 128);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(188, 59);
-            this.button1.TabIndex = 26;
-            this.button1.Text = "Imprimer";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.button1.UseVisualStyleBackColor = false;
+            this.BtnImprimer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnImprimer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.BtnImprimer.FlatAppearance.BorderSize = 0;
+            this.BtnImprimer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnImprimer.Image = ((System.Drawing.Image)(resources.GetObject("BtnImprimer.Image")));
+            this.BtnImprimer.Location = new System.Drawing.Point(656, 128);
+            this.BtnImprimer.Name = "BtnImprimer";
+            this.BtnImprimer.Size = new System.Drawing.Size(188, 59);
+            this.BtnImprimer.TabIndex = 26;
+            this.BtnImprimer.Text = "Imprimer";
+            this.BtnImprimer.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.BtnImprimer.UseVisualStyleBackColor = false;
+            this.BtnImprimer.Click += new System.EventHandler(this.BtnImprimer_Click);
+            // 
+            // dgvListe
+            // 
+            this.dgvListe.AllowUserToAddRows = false;
+            this.dgvListe.AllowUserToDeleteRows = false;
+            this.dgvListe.BackgroundColor = System.Drawing.Color.White;
+            this.dgvListe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListe.Location = new System.Drawing.Point(53, 218);
+            this.dgvListe.Name = "dgvListe";
+            this.dgvListe.Size = new System.Drawing.Size(791, 321);
+            this.dgvListe.TabIndex = 22;
             // 
             // FrmFacturation
             // 
@@ -224,7 +227,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(905, 599);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.BtnImprimer);
             this.Controls.Add(this.lbl_total_general);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txt_telephone);
@@ -250,8 +253,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txt_prix_unitaire)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_quantite)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_client)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_telephone)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListe)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -269,10 +272,10 @@
         private System.Windows.Forms.Label label1;
         private Syncfusion.Windows.Forms.Tools.TextBoxExt txt_client;
         private System.Windows.Forms.Button BtnAdd;
-        private System.Windows.Forms.DataGridView dgvListe;
         private System.Windows.Forms.Label label6;
         private Syncfusion.Windows.Forms.Tools.TextBoxExt txt_telephone;
         private System.Windows.Forms.Label lbl_total_general;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtnImprimer;
+        private System.Windows.Forms.DataGridView dgvListe;
     }
 }

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Helper.Properties
+namespace Dieu_voit_tout.Properties
 {
 
 

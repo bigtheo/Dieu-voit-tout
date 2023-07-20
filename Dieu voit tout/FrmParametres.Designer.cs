@@ -1,4 +1,4 @@
-﻿namespace Helper
+﻿namespace Dieu_voit_tout
 {
     partial class FrmParametres
     {

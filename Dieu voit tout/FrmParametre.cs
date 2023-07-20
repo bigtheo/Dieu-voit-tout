@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Helper.Helper
+namespace Dieu_voit_tout.Helper
 {
     public partial class FrmParametre : Form
     {

@@ -1,4 +1,4 @@
-﻿using Helper.Common;
+﻿using Dieu_voit_tout.Common;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Helper
+namespace Dieu_voit_tout
 {
     public partial class FrmArticle : Form
     {

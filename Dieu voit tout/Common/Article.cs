@@ -3,7 +3,7 @@ using System;
 using System.Data;
 using System.Windows.Forms;
 
-namespace Helper.Common
+namespace Dieu_voit_tout.Common
 {
     public class Article
     {
@@ -16,7 +16,7 @@ namespace Helper.Common
         //permet d'ajouter un article dans la base de données
         public bool AddNewProduct()
         {
-            var sql = "Insert into article(code_barre,Designation,pu,stock) values(@p_code,@p_des,@p_pu,@p_stock)";
+            var sql = "Insert into product(code_barre,Designation,pu,stock) values(@p_code,@p_des,@p_pu,@p_stock)";
 
             using (MySqlCommand cmd = new MySqlCommand(sql, Connexion.Con))
             {
@@ -60,7 +60,7 @@ namespace Helper.Common
         //permet de modifier le nom de l'article
         public bool RenameProductName(string newname)
         {
-            var sql = "update article set designation=@p_newname where code_barre=@p_code";
+            var sql = "update product set designation=@p_newname where code_barre=@p_code";
             using (MySqlCommand cmd = new MySqlCommand(sql, Connexion.Con))
             {
                 MySqlParameter p_code = new MySqlParameter("@p_code", MySqlDbType.VarChar)
@@ -90,7 +90,7 @@ namespace Helper.Common
         //obtenir les article
         public DataTable GetTable()
         {
-            var sql = "select id,code_barre 'Code barre',Designation,pu 'Prix Unitaire',stock 'Quantité' from article;";
+            var sql = "select id,code_barre 'Code barre',Designation,pu 'Prix Unitaire',stock 'Quantité' from product;";
             using (MySqlCommand cmd = new MySqlCommand(sql, Connexion.Con))
             {
                 using (MySqlDataAdapter da = new MySqlDataAdapter(cmd))
@@ -115,7 +115,7 @@ namespace Helper.Common
         //obtenir le nom de l'article par code
         public string GetProductName(string codebare)
         {
-            var sql = "select Designation from article where code_barre=@p_code";
+            var sql = "select Designation from product where code_barre=@p_code";
             using (MySqlCommand cmd = new MySqlCommand(sql, Connexion.Con))
             {
                 try
@@ -139,7 +139,7 @@ namespace Helper.Common
 
         public decimal GetProductPrice(string codebare)
         {
-            var sql = "select pu from article where code_barre=@p_code";
+            var sql = "select pu from product where code_barre=@p_code";
             using (MySqlCommand cmd = new MySqlCommand(sql, Connexion.Con))
             {
                 try

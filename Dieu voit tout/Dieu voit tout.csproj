@@ -112,31 +112,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common\Article.cs" />
+    <Compile Include="Common\Customer.cs" />
+    <Compile Include="Common\Invoice.cs" />
+    <Compile Include="Common\InvoiceLine.cs" />
     <Compile Include="Common\Order.cs" />
+    <Compile Include="Common\Stock.cs" />
+    <Compile Include="Common\Users.cs" />
     <Compile Include="Connexion.cs" />
-    <Compile Include="Core\Models\Abonnes.cs" />
-    <Compile Include="Core\Models\Accompte.cs" />
-    <Compile Include="Core\Models\Client.cs" />
-    <Compile Include="Core\Models\Dépenses.cs" />
-    <Compile Include="Core\Models\Facture.cs" />
-    <Compile Include="Core\Models\FactureDetailsBoutique.cs" />
-    <Compile Include="Core\Models\FactureDetailsPressing.cs" />
-    <Compile Include="Core\Models\Observation.cs" />
-    <Compile Include="Core\Models\Product.cs" />
-    <Compile Include="Core\Models\Reduction.cs" />
-    <Compile Include="Core\Models\Retrait.cs" />
-    <Compile Include="Core\Models\Stock.cs" />
-    <Compile Include="Core\Models\Tarif.cs" />
-    <Compile Include="Core\Models\Users.cs" />
-    <Compile Include="Core\Printing\FactureDocument.cs" />
     <Compile Include="FrmApercuAvantImpression.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmApercuAvantImpression.Designer.cs">
       <DependentUpon>FrmApercuAvantImpression.cs</DependentUpon>
     </Compile>
-    <Compile Include="Core\Printing\PdfDocument.cs" />
-    <Compile Include="Core\Printing\RapportDocument.cs" />
     <Compile Include="FrmArticle.cs">
       <SubType>Form</SubType>
     </Compile>

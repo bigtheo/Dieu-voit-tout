@@ -1,4 +1,4 @@
-﻿namespace Helper.Core.Printing
+﻿namespace Dieu_voit_tout.Core.Printing
 {
     partial class FrmApercuAvantImpression
     {

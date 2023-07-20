@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Helper
+namespace Dieu_voit_tout
 {
     internal static class Program
     {
