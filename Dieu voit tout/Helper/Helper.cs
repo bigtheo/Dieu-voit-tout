@@ -2,6 +2,7 @@
 using iTextSharp.text;
 using MySqlConnector;
 using System;
+using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
 
@@ -33,7 +34,7 @@ namespace Dieu_voit_toutHelperr
         {
             #region la police
 
-            iTextSharp.text.Font police = FontFactory.GetFont("TIMES NEW ROMAN", 16, 1, new BaseColor(31, 50, 64));
+            iTextSharp.text.Font police = FontFactory.GetFont("Segoe UI", 14, 1, new BaseColor(31, 50, 64));
             police.SetStyle(iTextSharp.text.Font.BOLD);
 
             #endregion la police
@@ -48,7 +49,7 @@ namespace Dieu_voit_toutHelperr
                 Alignment = Element.ALIGN_CENTER
             };
 
-            police = FontFactory.GetFont("TIMES NEW ROMAN", 7, 1, new BaseColor(31, 50, 64));
+            police = FontFactory.GetFont("Segoe UI", 7, 1, new BaseColor(31, 50, 64));
             Chunk c_adresse = new Chunk(Adresse, police);
             c_adresse.SetUnderline(0.2f, -2f);
 
@@ -56,7 +57,7 @@ namespace Dieu_voit_toutHelperr
             {
                 Alignment = Element.ALIGN_CENTER
             };
-            iTextSharp.text.Font font = FontFactory.GetFont("TIMES NEW ROMAN", 8, 1, new BaseColor(31, 50, 64));
+            iTextSharp.text.Font font = FontFactory.GetFont("Segoe UI", 8, 1, new BaseColor(31, 50, 64));
 
             document.Add(p_entete);
             document.Add(p_adresse);

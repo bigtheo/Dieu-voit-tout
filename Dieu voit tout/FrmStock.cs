@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Dieu_voit_tout.Common;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,7 @@ namespace Dieu_voit_tout
         public FrmStock()
         {
             InitializeComponent();
+            dgvListe.DataSource = new Stock().GetTable(dtp_date.Value);
         }
     }
 }

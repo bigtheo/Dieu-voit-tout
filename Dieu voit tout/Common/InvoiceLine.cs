@@ -13,6 +13,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data;
+using Org.BouncyCastle.Asn1.X509;
+using Syncfusion.Windows.Forms.Tools;
 
 namespace Dieu_voit_tout.Common
 {
@@ -24,7 +26,7 @@ namespace Dieu_voit_tout.Common
         public decimal NegociatedPrice { get; set; }
         public string CodeBarre { get; internal set; }
         public string Designation { get; internal set; }
-        public decimal PrixTotal { get; internal set; }
+        public decimal PrixTotal { get; internal set; } = 0;
 
         public bool IsInserted(ObservableCollection<InvoiceLine> lines,Int64 invoice_id)
         {
@@ -74,17 +76,25 @@ namespace Dieu_voit_tout.Common
                     return true;
                 }
             }
-            catch (Exception ex)
+            catch (MySqlException ex)
             {
                 transaction.Rollback();
-                System.Windows.Forms.MessageBox.Show(ex.Message);
+                switch (ex.Number)
+                {
+                    case 1690:
+                        System.Windows.Forms.MessageBox.Show($"Cet article n'est plus disponible dans le stock","Information",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                        break;
+                    default:
+                        System.Windows.Forms.MessageBox.Show($"Une erreur s'est produite :{ex.Message} {ex.Number}");
+                        break;
+                }
                 return default;
 
             }
 
         }
 
-        public void Print(ObservableCollection<InvoiceLine> order_collection,Int64 invoice_id,Customer customer,decimal total_general)
+        public void Print(ObservableCollection<InvoiceLine> order_collection, Int64 invoice_id, Customer customer)
         {
 
             #region Création du document
@@ -92,7 +102,7 @@ namespace Dieu_voit_tout.Common
             float width = Convert.ToSingle(88 * 2.54);//taill du papier
             Rectangle taille = new Rectangle(new Rectangle(width, 10000)); // le format(longueur et largueur) du récu
             Document doc = new Document(taille);
-            doc.SetMargins(doc.LeftMargin, doc.RightMargin, 1, doc.Bottom);
+            doc.SetMargins(10, 10, 1, doc.Bottom);
 
             try
             {
@@ -119,7 +129,7 @@ namespace Dieu_voit_tout.Common
 
             PdfPTable table = new PdfPTable(4)
             {
-                WidthPercentage = 130
+                WidthPercentage = 100
             };
             table.SetWidths(new float[] { 60, 20, 9, 25 });
             PdfPCell cell_designation = new PdfPCell(new Phrase("Désignation", police_entete));
@@ -127,7 +137,7 @@ namespace Dieu_voit_tout.Common
             PdfPCell cell_prix_unitaire = new PdfPCell(new Phrase("QT.", police_entete));
             PdfPCell cell_prix_total = new PdfPCell(new Phrase("P.T.", police_entete));
 
-            Paragraph p_numero_fatcure = new Paragraph($"Fact. N° {invoice_id}")
+            Paragraph p_numero_fatcure = new Paragraph($"Fact. N° {invoice_id}",police_entete)
             {
                 Alignment = 1
             };
@@ -137,7 +147,7 @@ namespace Dieu_voit_tout.Common
                 Alignment = 1
             };
 
-            Paragraph p_Titre = new Paragraph("Facture")
+            Paragraph p_Titre = new Paragraph($"Imprimée, le {DateTime.Now:dddd / MMMM / yyyy à HH:mm}",police_entete)
             {
                 Alignment = 1
             };
@@ -156,6 +166,7 @@ namespace Dieu_voit_tout.Common
             Phrase phrase_price;
             Phrase phrase_quantite;
             Phrase phrase_total;
+            
             foreach (InvoiceLine order in order_collection)
             {
                 phrase_order = new Phrase(order.Designation, font);
@@ -173,7 +184,22 @@ namespace Dieu_voit_tout.Common
                 phrase_total = new Phrase(order.PrixTotal.ToString(), font);
                 cell_prix_total.Phrase = phrase_total;
                 table.AddCell(cell_prix_total);
+
+                PrixTotal += order.PrixTotal;
             }
+
+
+            phrase_order = new Phrase("Total général", font);
+            cell_designation.Phrase = phrase_order;
+            table.AddCell(cell_designation);
+
+            font = new Font(Font.NORMAL, 10, 2);
+            phrase_total = new Phrase(PrixTotal.ToString("C"), font);
+            
+            cell_prix_total.Phrase = phrase_total;
+            cell_prix_total.Colspan = 3;
+            table.AddCell(cell_prix_total);
+
 
 
             Paragraph passerLigne = new Paragraph(Environment.NewLine);
@@ -192,7 +218,7 @@ namespace Dieu_voit_tout.Common
 
             doc.Add(p_Titre);
 
-            Paragraph p_passeLine = new Paragraph(new Paragraph("-------------------------", font))
+            Paragraph p_passeLine = new Paragraph(new Paragraph("================================", font))
             {
                 Alignment = 1,
             };
@@ -203,11 +229,9 @@ namespace Dieu_voit_tout.Common
             doc.Add(table);
             doc.Add(p_mention);
 
-            doc.Add(new Paragraph($"\n\tImprimée le {DateTime.Now}",font));
 
-            doc.Add(new Paragraph(passerLigne));
 
-            doc.Add(new Paragraph($"\n\tValidée par {FrmLogin.Login}", font));
+           // doc.Add(new Paragraph($"Validée par {FrmLogin.Login}", font));
 
             doc.Close();
 

@@ -122,10 +122,11 @@ namespace Dieu_voit_tout
             if (invoiceline.IsInserted(order_collection,invoiceNumber))
             {
                 MessageBox.Show("Fature enregistrée avec succès.","Information",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                //printing invoice
+                invoiceline.Print(order_collection, invoiceNumber, customer);
+
             }
 
-            //printing invoice
-            invoiceline.Print(order_collection, invoiceNumber, customer,Convert.ToDecimal(lbl_total_general.Text));
 
         }
         private void AddInvoiceToCollection()

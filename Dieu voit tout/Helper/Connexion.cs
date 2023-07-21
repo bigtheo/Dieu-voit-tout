@@ -32,7 +32,7 @@ namespace Dieu_voit_tout.Helper
                 {
                     case 0:
                         MessageBox.Show("Echec de connexion au serveur", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        new FrmParametre().ShowDialog();
+                        new FrmParametres().ShowDialog();
 
                         break;
 
@@ -42,7 +42,7 @@ namespace Dieu_voit_tout.Helper
 
                         case 1049:
                         MessageBox.Show("Base de données inconnue", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        new FrmParametre().ShowDialog();
+                        new FrmParametres().ShowDialog();
                         break;
 
                         default:
@@ -83,7 +83,7 @@ namespace Dieu_voit_tout.Helper
                 }catch(InvalidOperationException ex)
                 {
                     MessageBox.Show(ex.Message);
-                    new FrmParametre().ShowDialog();
+                    new FrmParametres().ShowDialog();
                     return 0;
                 }
             }
