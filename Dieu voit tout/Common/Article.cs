@@ -112,6 +112,8 @@ namespace Dieu_voit_tout.Common
             }
         }
 
+        
+
         //obtenir le nom de l'article par code
         public string GetProductName(string codebare)
         {

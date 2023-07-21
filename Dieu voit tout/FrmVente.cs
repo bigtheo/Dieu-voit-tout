@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Dieu_voit_tout.Common;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,7 @@ namespace Dieu_voit_tout
         public FrmVente()
         {
             InitializeComponent();
+            dgvListe.DataSource = new InvoiceLine().GetTable(dtp_date.Value);
         }
 
         private void BtnNouveau_Click(object sender, EventArgs e)

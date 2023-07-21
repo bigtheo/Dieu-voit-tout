@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmVente));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvListe = new Syncfusion.WinForms.DataGrid.SfDataGrid();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtp_date = new System.Windows.Forms.DateTimePicker();
             this.panel2 = new System.Windows.Forms.Panel();
             this.BtnImprimer = new System.Windows.Forms.Button();
             this.BtnModifier = new System.Windows.Forms.Button();
@@ -63,6 +64,7 @@
             this.dgvListe.AccessibleName = "Table";
             this.dgvListe.AllowEditing = false;
             this.dgvListe.AllowFiltering = true;
+            this.dgvListe.AllowGrouping = false;
             this.dgvListe.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -72,14 +74,14 @@
             this.dgvListe.TabIndex = 9;
             this.dgvListe.Text = "sfDataGrid1";
             // 
-            // dateTimePicker1
+            // dtp_date
             // 
-            this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(525, 7);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(91, 25);
-            this.dateTimePicker1.TabIndex = 8;
+            this.dtp_date.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtp_date.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp_date.Location = new System.Drawing.Point(525, 7);
+            this.dtp_date.Name = "dtp_date";
+            this.dtp_date.Size = new System.Drawing.Size(91, 25);
+            this.dtp_date.TabIndex = 8;
             // 
             // panel2
             // 
@@ -127,11 +129,12 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(679, 535);
             this.Controls.Add(this.dgvListe);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtp_date);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmVente";
             this.Text = "FrmVente";
@@ -147,7 +150,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private Syncfusion.WinForms.DataGrid.SfDataGrid dgvListe;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtp_date;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button BtnImprimer;
         private System.Windows.Forms.Button BtnModifier;

@@ -12,6 +12,7 @@ using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data;
 
 namespace Dieu_voit_tout.Common
 {
@@ -22,7 +23,7 @@ namespace Dieu_voit_tout.Common
         public long Amount { get; set; }
         public decimal NegociatedPrice { get; set; }
         public string CodeBarre { get; internal set; }
-        public object Designation { get; internal set; }
+        public string Designation { get; internal set; }
         public decimal PrixTotal { get; internal set; }
 
         public bool IsInserted(ObservableCollection<InvoiceLine> lines,Int64 invoice_id)
@@ -88,9 +89,10 @@ namespace Dieu_voit_tout.Common
 
             #region Création du document
 
-            float width = Convert.ToSingle(58 * 2.54);
-            Rectangle taille = new Rectangle(new Rectangle(width, 1000)); // le format(longueur et largueur) du récu
-            Document doc = new Document(taille, 0f, 0f, 0f, 0f);
+            float width = Convert.ToSingle(88 * 2.54);//taill du papier
+            Rectangle taille = new Rectangle(new Rectangle(width, 10000)); // le format(longueur et largueur) du récu
+            Document doc = new Document(taille);
+            doc.SetMargins(doc.LeftMargin, doc.RightMargin, 1, doc.Bottom);
 
             try
             {
@@ -117,7 +119,7 @@ namespace Dieu_voit_tout.Common
 
             PdfPTable table = new PdfPTable(4)
             {
-                WidthPercentage = 100
+                WidthPercentage = 130
             };
             table.SetWidths(new float[] { 60, 20, 9, 25 });
             PdfPCell cell_designation = new PdfPCell(new Phrase("Désignation", police_entete));
@@ -149,14 +151,14 @@ namespace Dieu_voit_tout.Common
             table.AddCell(cell_prix_total);
 
             //ajout des détails à la facture
-/*
+
             Phrase phrase_order;
             Phrase phrase_price;
             Phrase phrase_quantite;
             Phrase phrase_total;
             foreach (InvoiceLine order in order_collection)
             {
-                phrase_order = new Phrase(customer.Name, font);
+                phrase_order = new Phrase(order.Designation, font);
                 cell_designation.Phrase = phrase_order;
                 table.AddCell(cell_designation);
 
@@ -173,7 +175,7 @@ namespace Dieu_voit_tout.Common
                 table.AddCell(cell_prix_total);
             }
 
-*/
+
             Paragraph passerLigne = new Paragraph(Environment.NewLine);
 
             #endregion tableau principle
@@ -201,11 +203,11 @@ namespace Dieu_voit_tout.Common
             doc.Add(table);
             doc.Add(p_mention);
 
-            doc.Add(new Paragraph($"Fait à lubumbashi le {DateTime.Now}"));
+            doc.Add(new Paragraph($"\n\tImprimée le {DateTime.Now}",font));
 
             doc.Add(new Paragraph(passerLigne));
-            doc.Add(new Paragraph($"Sceau et Signature.............."));
-            doc.Add(new Paragraph($"Validée par {FrmLogin.Login}", font));
+
+            doc.Add(new Paragraph($"\n\tValidée par {FrmLogin.Login}", font));
 
             doc.Close();
 
@@ -221,5 +223,33 @@ namespace Dieu_voit_tout.Common
             }
         }
 
+        public DataTable GetTable(DateTime date)
+        {
+            var sql = " Select l.invoice_id 'N° Facture',p.code_barre 'Code barre' ,p.designation,l.amount 'Quantité',l.negociated_price 'Prix de vente',l.amount*l.negociated_price 'Prix total' from invoiceline l inner join product p on  p.code_barre = l.code_barre where date(created_time) = date(@p_date) union Select 'Total','-','-','-','-',ifnull(sum(l.amount*l.negociated_price),0) from invoiceLine l  where date(created_time) = date(@p_date);";
+            using (MySqlCommand cmd = new MySqlCommand(sql, Connexion.Con))
+            {
+                using (MySqlDataAdapter da = new MySqlDataAdapter(cmd))
+                {
+                    MySqlParameter p_date = new MySqlParameter("@p_date", MySqlDbType.Date)
+                    {
+                        Value = date
+                    };
+                    cmd.Parameters.Add(p_date);
+                    try
+                    {
+                        DataTable table = new DataTable();
+
+                        da.Fill(table);
+
+                        return table;
+                    }
+                    catch (MySqlException ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                        return default;
+                    }
+                }
+            }
+        }
     }
 }

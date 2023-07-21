@@ -17,14 +17,24 @@ namespace Dieu_voit_tout
             InitializeComponent();
         }
 
-        public static object Login { get; internal set; }
+        public static string Login { get; internal set; }
 
         private void BtnConnection_Click(object sender, EventArgs e)
         {
+            Login = txt_username.Text;
+            
             if (Connexion.Connecter())
             {
-                this.Hide();
-                new FrmMainPage().Show();
+                if (Connexion.IsConnected(Login, txt_password.Text))
+                {
+                    this.Hide();
+                    new FrmMainPage().Show();
+                }
+                else
+                {
+                    MessageBox.Show("password/username incorrect.","Error");
+                }
+
 
                 
             }

@@ -104,23 +104,28 @@ namespace Dieu_voit_tout
         {
             AddInvoiceToCollection();
 
+            var customer = new Customer()
+            {
+                Name = txt_client.Text,
+                Phone = txt_telephone.Text
+            };
+
+            var invoice = new Invoice()
+            {
+                CustomerId=customer.IsInserted(),
+                UserId =1
+            };
             var invoiceline = new InvoiceLine();
 
             //saving the invoices 
-
-            if (invoiceline.IsInserted(order_collection, 2))
+            var invoiceNumber = invoice.IsInserted();
+            if (invoiceline.IsInserted(order_collection,invoiceNumber))
             {
                 MessageBox.Show("Fature enregistrée avec succès.","Information",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
 
-            Customer customer = new Customer()
-            {
-                Name=txt_client.Text,
-                Phone = txt_telephone.Text
-            };
-            customer.IsInserted();
             //printing invoice
-            invoiceline.Print(order_collection,2,customer,Convert.ToDecimal(lbl_total_general.Text));
+            invoiceline.Print(order_collection, invoiceNumber, customer,Convert.ToDecimal(lbl_total_general.Text));
 
         }
         private void AddInvoiceToCollection()

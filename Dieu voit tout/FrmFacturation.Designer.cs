@@ -57,7 +57,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(130, 123);
+            this.label5.Location = new System.Drawing.Point(105, 109);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(57, 17);
             this.label5.TabIndex = 18;
@@ -66,7 +66,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(110, 149);
+            this.label4.Location = new System.Drawing.Point(85, 135);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(78, 17);
             this.label4.TabIndex = 17;
@@ -75,7 +75,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(110, 88);
+            this.label3.Location = new System.Drawing.Point(85, 74);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(77, 17);
             this.label3.TabIndex = 16;
@@ -84,7 +84,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(112, 56);
+            this.label2.Location = new System.Drawing.Point(87, 42);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(75, 17);
             this.label2.TabIndex = 15;
@@ -93,7 +93,7 @@
             // txt_code
             // 
             this.txt_code.BeforeTouchSize = new System.Drawing.Size(188, 25);
-            this.txt_code.Location = new System.Drawing.Point(200, 53);
+            this.txt_code.Location = new System.Drawing.Point(175, 39);
             this.txt_code.Name = "txt_code";
             this.txt_code.Size = new System.Drawing.Size(188, 25);
             this.txt_code.TabIndex = 11;
@@ -103,7 +103,7 @@
             // 
             this.txt_designation.BeforeTouchSize = new System.Drawing.Size(188, 25);
             this.txt_designation.Enabled = false;
-            this.txt_designation.Location = new System.Drawing.Point(199, 84);
+            this.txt_designation.Location = new System.Drawing.Point(174, 70);
             this.txt_designation.Name = "txt_designation";
             this.txt_designation.Size = new System.Drawing.Size(188, 25);
             this.txt_designation.TabIndex = 12;
@@ -116,7 +116,7 @@
             0,
             0,
             131072});
-            this.txt_prix_unitaire.Location = new System.Drawing.Point(199, 144);
+            this.txt_prix_unitaire.Location = new System.Drawing.Point(174, 130);
             this.txt_prix_unitaire.Name = "txt_prix_unitaire";
             this.txt_prix_unitaire.Size = new System.Drawing.Size(187, 25);
             this.txt_prix_unitaire.TabIndex = 14;
@@ -127,7 +127,7 @@
             // 
             this.txt_quantite.BeforeTouchSize = new System.Drawing.Size(188, 25);
             this.txt_quantite.IntegerValue = ((long)(1));
-            this.txt_quantite.Location = new System.Drawing.Point(199, 115);
+            this.txt_quantite.Location = new System.Drawing.Point(174, 101);
             this.txt_quantite.Name = "txt_quantite";
             this.txt_quantite.Size = new System.Drawing.Size(188, 25);
             this.txt_quantite.TabIndex = 13;
@@ -138,17 +138,17 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(610, 60);
+            this.label1.Location = new System.Drawing.Point(552, 87);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 17);
+            this.label1.Size = new System.Drawing.Size(68, 17);
             this.label1.TabIndex = 20;
-            this.label1.Text = "Client";
+            this.label1.Text = "Nom clent";
             // 
             // txt_client
             // 
             this.txt_client.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_client.BeforeTouchSize = new System.Drawing.Size(188, 25);
-            this.txt_client.Location = new System.Drawing.Point(656, 56);
+            this.txt_client.Location = new System.Drawing.Point(631, 83);
             this.txt_client.Name = "txt_client";
             this.txt_client.Size = new System.Drawing.Size(188, 25);
             this.txt_client.TabIndex = 19;
@@ -156,7 +156,7 @@
             // BtnAdd
             // 
             this.BtnAdd.Enabled = false;
-            this.BtnAdd.Location = new System.Drawing.Point(418, 144);
+            this.BtnAdd.Location = new System.Drawing.Point(393, 130);
             this.BtnAdd.Name = "BtnAdd";
             this.BtnAdd.Size = new System.Drawing.Size(62, 26);
             this.BtnAdd.TabIndex = 21;
@@ -168,7 +168,7 @@
             // 
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(563, 92);
+            this.label6.Location = new System.Drawing.Point(538, 56);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(87, 17);
             this.label6.TabIndex = 24;
@@ -178,16 +178,17 @@
             // 
             this.txt_telephone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_telephone.BeforeTouchSize = new System.Drawing.Size(188, 25);
-            this.txt_telephone.Location = new System.Drawing.Point(656, 88);
+            this.txt_telephone.Location = new System.Drawing.Point(631, 52);
             this.txt_telephone.Name = "txt_telephone";
             this.txt_telephone.Size = new System.Drawing.Size(188, 25);
             this.txt_telephone.TabIndex = 23;
+            this.txt_telephone.Text = "+243";
             // 
             // lbl_total_general
             // 
             this.lbl_total_general.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_total_general.AutoSize = true;
-            this.lbl_total_general.Location = new System.Drawing.Point(829, 557);
+            this.lbl_total_general.Location = new System.Drawing.Point(804, 543);
             this.lbl_total_general.Name = "lbl_total_general";
             this.lbl_total_general.Size = new System.Drawing.Size(15, 17);
             this.lbl_total_general.TabIndex = 25;
@@ -200,7 +201,7 @@
             this.BtnImprimer.FlatAppearance.BorderSize = 0;
             this.BtnImprimer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnImprimer.Image = ((System.Drawing.Image)(resources.GetObject("BtnImprimer.Image")));
-            this.BtnImprimer.Location = new System.Drawing.Point(656, 128);
+            this.BtnImprimer.Location = new System.Drawing.Point(631, 114);
             this.BtnImprimer.Name = "BtnImprimer";
             this.BtnImprimer.Size = new System.Drawing.Size(188, 59);
             this.BtnImprimer.TabIndex = 26;
@@ -215,9 +216,9 @@
             this.dgvListe.AllowUserToDeleteRows = false;
             this.dgvListe.BackgroundColor = System.Drawing.Color.White;
             this.dgvListe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListe.Location = new System.Drawing.Point(53, 218);
+            this.dgvListe.Location = new System.Drawing.Point(90, 204);
             this.dgvListe.Name = "dgvListe";
-            this.dgvListe.Size = new System.Drawing.Size(791, 321);
+            this.dgvListe.Size = new System.Drawing.Size(729, 321);
             this.dgvListe.TabIndex = 22;
             // 
             // FrmFacturation
@@ -244,7 +245,10 @@
             this.Controls.Add(this.txt_prix_unitaire);
             this.Controls.Add(this.txt_quantite);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmFacturation";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Facturation";

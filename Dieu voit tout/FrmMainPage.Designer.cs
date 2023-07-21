@@ -33,7 +33,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
+            this.BtnSetting = new System.Windows.Forms.Button();
             this.BtnRapports = new System.Windows.Forms.Button();
             this.BtnVente = new System.Windows.Forms.Button();
             this.BtnStock = new System.Windows.Forms.Button();
@@ -49,7 +49,7 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.button6);
+            this.panel1.Controls.Add(this.BtnSetting);
             this.panel1.Controls.Add(this.BtnRapports);
             this.panel1.Controls.Add(this.BtnVente);
             this.panel1.Controls.Add(this.BtnStock);
@@ -89,20 +89,21 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Dieu voit Software";
             // 
-            // button6
+            // BtnSetting
             // 
-            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(22, 502);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(161, 43);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "Settings";
-            this.button6.UseVisualStyleBackColor = true;
+            this.BtnSetting.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.BtnSetting.FlatAppearance.BorderSize = 0;
+            this.BtnSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSetting.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSetting.Image = ((System.Drawing.Image)(resources.GetObject("BtnSetting.Image")));
+            this.BtnSetting.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnSetting.Location = new System.Drawing.Point(22, 502);
+            this.BtnSetting.Name = "BtnSetting";
+            this.BtnSetting.Size = new System.Drawing.Size(161, 43);
+            this.BtnSetting.TabIndex = 5;
+            this.BtnSetting.Text = "Settings";
+            this.BtnSetting.UseVisualStyleBackColor = true;
+            this.BtnSetting.Click += new System.EventHandler(this.BtnSetting_Click);
             // 
             // BtnRapports
             // 
@@ -197,7 +198,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button BtnArticle;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button BtnSetting;
         private System.Windows.Forms.Button BtnRapports;
         private System.Windows.Forms.Button BtnVente;
         private System.Windows.Forms.Button BtnStock;

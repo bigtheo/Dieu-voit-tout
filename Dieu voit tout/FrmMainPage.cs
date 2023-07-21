@@ -94,5 +94,10 @@ namespace Dieu_voit_tout
         {
             Application.Exit();
         }
+
+        private void BtnSetting_Click(object sender, EventArgs e)
+        {
+            new FrmParametres().ShowDialog();
+        }
     }
 }
