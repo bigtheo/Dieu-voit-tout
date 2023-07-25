@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMainPage));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.pbx_software_icon = new System.Windows.Forms.PictureBox();
+            this.lbl_software_name = new System.Windows.Forms.Label();
             this.BtnSetting = new System.Windows.Forms.Button();
             this.BtnRapports = new System.Windows.Forms.Button();
             this.BtnVente = new System.Windows.Forms.Button();
@@ -40,15 +40,15 @@
             this.BtnArticle = new System.Windows.Forms.Button();
             this.panelContainer = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx_software_icon)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.pbx_software_icon);
+            this.panel1.Controls.Add(this.lbl_software_name);
             this.panel1.Controls.Add(this.BtnSetting);
             this.panel1.Controls.Add(this.BtnRapports);
             this.panel1.Controls.Add(this.BtnVente);
@@ -69,25 +69,27 @@
             this.panel2.Size = new System.Drawing.Size(148, 1);
             this.panel2.TabIndex = 8;
             // 
-            // pictureBox1
+            // pbx_software_icon
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(59, 28);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(74, 56);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
+            this.pbx_software_icon.Image = ((System.Drawing.Image)(resources.GetObject("pbx_software_icon.Image")));
+            this.pbx_software_icon.Location = new System.Drawing.Point(59, 28);
+            this.pbx_software_icon.Name = "pbx_software_icon";
+            this.pbx_software_icon.Size = new System.Drawing.Size(74, 56);
+            this.pbx_software_icon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbx_software_icon.TabIndex = 7;
+            this.pbx_software_icon.TabStop = false;
+            this.pbx_software_icon.Click += new System.EventHandler(this.pbx_software_icon_Click);
             // 
-            // label1
+            // lbl_software_name
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(30, 97);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(141, 22);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Dieu voit Software";
+            this.lbl_software_name.AutoSize = true;
+            this.lbl_software_name.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_software_name.Location = new System.Drawing.Point(30, 97);
+            this.lbl_software_name.Name = "lbl_software_name";
+            this.lbl_software_name.Size = new System.Drawing.Size(141, 22);
+            this.lbl_software_name.TabIndex = 6;
+            this.lbl_software_name.Text = "Dieu voit Software";
+            this.lbl_software_name.Click += new System.EventHandler(this.lbl_software_name_Click);
             // 
             // BtnSetting
             // 
@@ -189,7 +191,7 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmMainPage_FormClosing);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx_software_icon)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -202,8 +204,8 @@
         private System.Windows.Forms.Button BtnRapports;
         private System.Windows.Forms.Button BtnVente;
         private System.Windows.Forms.Button BtnStock;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lbl_software_name;
+        private System.Windows.Forms.PictureBox pbx_software_icon;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panelContainer;
     }

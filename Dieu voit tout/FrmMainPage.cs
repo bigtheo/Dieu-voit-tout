@@ -19,6 +19,7 @@ namespace Dieu_voit_tout
         public FrmMainPage()
         {
             InitializeComponent();
+            OuvrirFormulaire(new FrmStatistiques());
         }
 
 
@@ -98,6 +99,16 @@ namespace Dieu_voit_tout
         private void BtnSetting_Click(object sender, EventArgs e)
         {
             new FrmParametres().ShowDialog();
+        }
+
+        private void lbl_software_name_Click(object sender, EventArgs e)
+        {
+            OuvrirFormulaire(new FrmStatistiques());
+        }
+
+        private void pbx_software_icon_Click(object sender, EventArgs e)
+        {
+            OuvrirFormulaire(new FrmStatistiques());
         }
     }
 }

@@ -52,6 +52,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.BtnSauvegarder = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.txt_port)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_server_dress)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_username)).BeginInit();
@@ -84,7 +85,7 @@
             // 
             // txt_port
             // 
-            this.txt_port.BeforeTouchSize = new System.Drawing.Size(370, 25);
+            this.txt_port.BeforeTouchSize = new System.Drawing.Size(66, 25);
             this.txt_port.Location = new System.Drawing.Point(144, 64);
             this.txt_port.Name = "txt_port";
             this.txt_port.Size = new System.Drawing.Size(66, 25);
@@ -92,7 +93,7 @@
             // 
             // txt_server_dress
             // 
-            this.txt_server_dress.BeforeTouchSize = new System.Drawing.Size(370, 25);
+            this.txt_server_dress.BeforeTouchSize = new System.Drawing.Size(66, 25);
             this.txt_server_dress.Location = new System.Drawing.Point(144, 95);
             this.txt_server_dress.Name = "txt_server_dress";
             this.txt_server_dress.Size = new System.Drawing.Size(370, 25);
@@ -100,7 +101,7 @@
             // 
             // txt_username
             // 
-            this.txt_username.BeforeTouchSize = new System.Drawing.Size(370, 25);
+            this.txt_username.BeforeTouchSize = new System.Drawing.Size(66, 25);
             this.txt_username.Location = new System.Drawing.Point(144, 126);
             this.txt_username.Name = "txt_username";
             this.txt_username.Size = new System.Drawing.Size(370, 25);
@@ -108,7 +109,7 @@
             // 
             // txt_user_password
             // 
-            this.txt_user_password.BeforeTouchSize = new System.Drawing.Size(370, 25);
+            this.txt_user_password.BeforeTouchSize = new System.Drawing.Size(66, 25);
             this.txt_user_password.Location = new System.Drawing.Point(144, 157);
             this.txt_user_password.Name = "txt_user_password";
             this.txt_user_password.Size = new System.Drawing.Size(370, 25);
@@ -116,7 +117,7 @@
             // 
             // txt_society_name
             // 
-            this.txt_society_name.BeforeTouchSize = new System.Drawing.Size(370, 25);
+            this.txt_society_name.BeforeTouchSize = new System.Drawing.Size(66, 25);
             this.txt_society_name.Location = new System.Drawing.Point(144, 188);
             this.txt_society_name.Name = "txt_society_name";
             this.txt_society_name.Size = new System.Drawing.Size(370, 25);
@@ -124,7 +125,7 @@
             // 
             // txt_phone_number
             // 
-            this.txt_phone_number.BeforeTouchSize = new System.Drawing.Size(370, 25);
+            this.txt_phone_number.BeforeTouchSize = new System.Drawing.Size(66, 25);
             this.txt_phone_number.Location = new System.Drawing.Point(144, 219);
             this.txt_phone_number.Name = "txt_phone_number";
             this.txt_phone_number.Size = new System.Drawing.Size(370, 25);
@@ -132,7 +133,7 @@
             // 
             // txt_database
             // 
-            this.txt_database.BeforeTouchSize = new System.Drawing.Size(370, 25);
+            this.txt_database.BeforeTouchSize = new System.Drawing.Size(66, 25);
             this.txt_database.Location = new System.Drawing.Point(293, 64);
             this.txt_database.Name = "txt_database";
             this.txt_database.Size = new System.Drawing.Size(221, 25);
@@ -140,7 +141,7 @@
             // 
             // txt_rccm
             // 
-            this.txt_rccm.BeforeTouchSize = new System.Drawing.Size(370, 25);
+            this.txt_rccm.BeforeTouchSize = new System.Drawing.Size(66, 25);
             this.txt_rccm.Location = new System.Drawing.Point(144, 281);
             this.txt_rccm.Name = "txt_rccm";
             this.txt_rccm.Size = new System.Drawing.Size(370, 25);
@@ -148,7 +149,7 @@
             // 
             // txt_society_adress
             // 
-            this.txt_society_adress.BeforeTouchSize = new System.Drawing.Size(370, 25);
+            this.txt_society_adress.BeforeTouchSize = new System.Drawing.Size(66, 25);
             this.txt_society_adress.Location = new System.Drawing.Point(144, 250);
             this.txt_society_adress.Name = "txt_society_adress";
             this.txt_society_adress.Size = new System.Drawing.Size(370, 25);
@@ -156,7 +157,7 @@
             // 
             // txt_mention
             // 
-            this.txt_mention.BeforeTouchSize = new System.Drawing.Size(370, 25);
+            this.txt_mention.BeforeTouchSize = new System.Drawing.Size(66, 25);
             this.txt_mention.Location = new System.Drawing.Point(144, 312);
             this.txt_mention.Multiline = true;
             this.txt_mention.Name = "txt_mention";
@@ -165,7 +166,7 @@
             // 
             // BtnSave
             // 
-            this.BtnSave.Location = new System.Drawing.Point(165, 385);
+            this.BtnSave.Location = new System.Drawing.Point(152, 385);
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Size = new System.Drawing.Size(155, 35);
             this.BtnSave.TabIndex = 14;
@@ -263,12 +264,23 @@
             this.label11.TabIndex = 24;
             this.label11.Text = "Mention";
             // 
+            // BtnSauvegarder
+            // 
+            this.BtnSauvegarder.Location = new System.Drawing.Point(359, 385);
+            this.BtnSauvegarder.Name = "BtnSauvegarder";
+            this.BtnSauvegarder.Size = new System.Drawing.Size(155, 35);
+            this.BtnSauvegarder.TabIndex = 25;
+            this.BtnSauvegarder.Text = "Sauvegarde";
+            this.BtnSauvegarder.UseVisualStyleBackColor = true;
+            this.BtnSauvegarder.Click += new System.EventHandler(this.BtnSauvegarder_Click);
+            // 
             // FrmParametres
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(559, 446);
+            this.Controls.Add(this.BtnSauvegarder);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -340,5 +352,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button BtnSauvegarder;
     }
 }

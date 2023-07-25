@@ -82,5 +82,10 @@ namespace Dieu_voit_tout
         {
             Save();
         }
+
+        private void BtnSauvegarder_Click(object sender, EventArgs e)
+        {
+            Dieu_voit_toutHelperr.Helper.Backup();
+        }
     }
 }
