@@ -23,6 +23,7 @@ namespace Dieu_voit_tout
         {
             Login = txt_username.Text;
             
+            
             if (Connexion.Connecter())
             {
                 if (Connexion.IsConnected(Login, txt_password.Text))
@@ -33,6 +34,7 @@ namespace Dieu_voit_tout
                 else
                 {
                     MessageBox.Show("password/username incorrect.","Error");
+                   
                 }
 
 

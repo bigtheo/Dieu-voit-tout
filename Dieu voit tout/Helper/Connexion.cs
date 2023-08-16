@@ -38,6 +38,7 @@ namespace Dieu_voit_tout.Helper
 
                         case 1045:
                         MessageBox.Show("username or password incorrect", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        new FrmParametres().ShowDialog();
                         break;
 
                         case 1049:

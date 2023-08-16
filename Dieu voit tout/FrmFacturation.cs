@@ -1,4 +1,6 @@
 ﻿using Dieu_voit_tout.Common;
+using MySqlConnector;
+using Syncfusion.Windows.Forms.Tools;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -70,7 +72,7 @@ namespace Dieu_voit_tout
                 total += Convert.ToDecimal(row.Cells[4].Value);
             }
 
-            lbl_total_general.Text = total.ToString();
+            lbl_total_general.Text = total.ToString("C");
         }
 
         private void BtnAdd_Click(object sender, EventArgs e)
@@ -129,6 +131,7 @@ namespace Dieu_voit_tout
 
 
         }
+       
         private void AddInvoiceToCollection()
         {
             order_collection.Clear();
@@ -151,5 +154,53 @@ namespace Dieu_voit_tout
 
         }
 
+
+
+        private void SetAutoComplete()
+        {
+            autoComplete1.HeaderForeColor = Color.FromArgb(20, 10, 115, 222);
+            autoComplete1.HeaderStyle = ColumnHeaderStyle.Clickable;
+            autoComplete1.Style = Syncfusion.Windows.Forms.Tools.AutoCompleteStyle.Office2016White;
+            autoComplete1.SetAutoComplete(txt_code, Syncfusion.Windows.Forms.Tools.AutoCompleteModes.MultiSuggestExtended);
+        }
+
+        private void populateAutoComple()
+        {
+            DataView view = new DataView(GetProductDatas());
+
+            // Setting data source to AutoComplete
+            this.autoComplete1.DataSource = view;
+
+
+        }
+
+        private DataTable GetProductDatas()
+        {
+            var sql = "select code_barre 'Code barre',designation,pu,stock from product;";
+            using (MySqlCommand cmd=new MySqlCommand (sql,Connexion.Con))
+            {
+                using (MySqlDataAdapter da=new MySqlDataAdapter (cmd))
+                {
+                    DataTable table = new DataTable();
+
+                    da.Fill(table);
+
+                    return table;
+
+                }
+            }
+        }
+
+        private void autoComplete1_AutoCompleteItemSelected(object sender, AutoCompleteItemEventArgs args)
+        {
+            txt_code.Text = args.ItemArray[0].ToString();
+        }
+
+        private void FrmFacturation_Load(object sender, EventArgs e)
+        {
+            SetAutoComplete();
+            populateAutoComple();
+
+        }
     }
 }

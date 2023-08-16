@@ -12,11 +12,13 @@ namespace Dieu_voit_tout.Common
         public Decimal Price { get; set; }
         public long Stock { get; set; } = 0;
         public string CodeBarre { get; set; }
+        public DateTime DateExpiration { get; internal set; }
+        public DateTime DateFabrication { get; internal set; }
 
         //permet d'ajouter un article dans la base de données
         public bool AddNewProduct()
         {
-            var sql = "Insert into product(code_barre,Designation,pu,stock) values(@p_code,@p_des,@p_pu,@p_stock)";
+            var sql = "Insert into product(code_barre,Designation,pu,stock,date_fabrication,date_expiration) values(@p_code,@p_des,@p_pu,@p_stock,@p_date_fabrication,@p_date_expiration)";
 
             using (MySqlCommand cmd = new MySqlCommand(sql, Connexion.Con))
             {
@@ -35,15 +37,27 @@ namespace Dieu_voit_tout.Common
                     Value = this.Price
                 };
 
-                MySqlParameter p_stock = new MySqlParameter("p_stock", MySqlDbType.Int64)
+                MySqlParameter p_stock = new MySqlParameter("@p_stock", MySqlDbType.Int64)
                 {
                     Value = this.Stock
+                };
+
+                MySqlParameter p_date_fab = new MySqlParameter("@p_date_fabrication", MySqlDbType.Date)
+                {
+                    Value = this.DateFabrication
+                };
+
+                MySqlParameter p_date_exp = new MySqlParameter("@p_date_expiration", MySqlDbType.Date)
+                {
+                    Value = this.DateExpiration
                 };
 
                 cmd.Parameters.Add(p_des);
                 cmd.Parameters.Add(p_price);
                 cmd.Parameters.Add(p_stock);
                 cmd.Parameters.Add(p_code);
+                cmd.Parameters.Add(p_date_fab);
+                cmd.Parameters.Add(p_date_exp);
 
                 try
                 {
@@ -111,8 +125,7 @@ namespace Dieu_voit_tout.Common
                 }
             }
         }
-
-        
+      
 
         //obtenir le nom de l'article par code
         public string GetProductName(string codebare)

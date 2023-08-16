@@ -31,7 +31,9 @@ namespace Dieu_voit_tout
                 Description=txt_designation.Text,
                 CodeBarre=txt_code.Text,
                 Price=txt_pu.DecimalValue,
-                Stock=txt_stock.IntegerValue
+                Stock=txt_stock.IntegerValue,
+                DateFabrication=dtp_fabrication.Value,
+                DateExpiration = dtp_expiration.Value
             };
 
             if(result == DialogResult.Yes)

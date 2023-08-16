@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmFacturation));
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -45,6 +46,7 @@
             this.lbl_total_general = new System.Windows.Forms.Label();
             this.BtnImprimer = new System.Windows.Forms.Button();
             this.dgvListe = new System.Windows.Forms.DataGridView();
+            this.autoComplete1 = new Syncfusion.Windows.Forms.Tools.AutoComplete(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.txt_code)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_designation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_prix_unitaire)).BeginInit();
@@ -52,6 +54,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txt_client)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_telephone)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListe)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.autoComplete1)).BeginInit();
             this.SuspendLayout();
             // 
             // label5
@@ -138,7 +141,7 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(552, 87);
+            this.label1.Location = new System.Drawing.Point(516, 76);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 17);
             this.label1.TabIndex = 20;
@@ -148,9 +151,9 @@
             // 
             this.txt_client.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_client.BeforeTouchSize = new System.Drawing.Size(188, 25);
-            this.txt_client.Location = new System.Drawing.Point(631, 83);
+            this.txt_client.Location = new System.Drawing.Point(595, 72);
             this.txt_client.Name = "txt_client";
-            this.txt_client.Size = new System.Drawing.Size(188, 25);
+            this.txt_client.Size = new System.Drawing.Size(262, 25);
             this.txt_client.TabIndex = 19;
             // 
             // BtnAdd
@@ -168,7 +171,7 @@
             // 
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(538, 56);
+            this.label6.Location = new System.Drawing.Point(502, 45);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(87, 17);
             this.label6.TabIndex = 24;
@@ -178,21 +181,23 @@
             // 
             this.txt_telephone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_telephone.BeforeTouchSize = new System.Drawing.Size(188, 25);
-            this.txt_telephone.Location = new System.Drawing.Point(631, 52);
+            this.txt_telephone.Location = new System.Drawing.Point(595, 41);
             this.txt_telephone.Name = "txt_telephone";
-            this.txt_telephone.Size = new System.Drawing.Size(188, 25);
+            this.txt_telephone.Size = new System.Drawing.Size(262, 25);
             this.txt_telephone.TabIndex = 23;
             this.txt_telephone.Text = "+243";
             // 
             // lbl_total_general
             // 
             this.lbl_total_general.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_total_general.AutoSize = true;
-            this.lbl_total_general.Location = new System.Drawing.Point(804, 543);
+            this.lbl_total_general.BackColor = System.Drawing.Color.IndianRed;
+            this.lbl_total_general.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_total_general.Location = new System.Drawing.Point(665, 529);
             this.lbl_total_general.Name = "lbl_total_general";
-            this.lbl_total_general.Size = new System.Drawing.Size(15, 17);
+            this.lbl_total_general.Size = new System.Drawing.Size(192, 53);
             this.lbl_total_general.TabIndex = 25;
             this.lbl_total_general.Text = "0";
+            this.lbl_total_general.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // BtnImprimer
             // 
@@ -201,9 +206,9 @@
             this.BtnImprimer.FlatAppearance.BorderSize = 0;
             this.BtnImprimer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnImprimer.Image = ((System.Drawing.Image)(resources.GetObject("BtnImprimer.Image")));
-            this.BtnImprimer.Location = new System.Drawing.Point(631, 114);
+            this.BtnImprimer.Location = new System.Drawing.Point(595, 103);
             this.BtnImprimer.Name = "BtnImprimer";
-            this.BtnImprimer.Size = new System.Drawing.Size(188, 59);
+            this.BtnImprimer.Size = new System.Drawing.Size(262, 59);
             this.BtnImprimer.TabIndex = 26;
             this.BtnImprimer.Text = "Imprimer";
             this.BtnImprimer.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
@@ -216,10 +221,22 @@
             this.dgvListe.AllowUserToDeleteRows = false;
             this.dgvListe.BackgroundColor = System.Drawing.Color.White;
             this.dgvListe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListe.Location = new System.Drawing.Point(90, 204);
+            this.dgvListe.Location = new System.Drawing.Point(93, 190);
             this.dgvListe.Name = "dgvListe";
-            this.dgvListe.Size = new System.Drawing.Size(729, 321);
+            this.dgvListe.RowHeadersWidth = 51;
+            this.dgvListe.Size = new System.Drawing.Size(765, 321);
             this.dgvListe.TabIndex = 22;
+            // 
+            // autoComplete1
+            // 
+            this.autoComplete1.HeaderFont = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World);
+            this.autoComplete1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Clickable;
+            this.autoComplete1.ItemFont = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.autoComplete1.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(158)))), ((int)(((byte)(218)))));
+            this.autoComplete1.ParentForm = this;
+            this.autoComplete1.Style = Syncfusion.Windows.Forms.Tools.AutoCompleteStyle.Default;
+            this.autoComplete1.ThemeName = "Default";
+            this.autoComplete1.AutoCompleteItemSelected += new Syncfusion.Windows.Forms.Tools.AutoCompleteItemEventHandler(this.autoComplete1_AutoCompleteItemSelected);
             // 
             // FrmFacturation
             // 
@@ -227,7 +244,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(905, 599);
+            this.ClientSize = new System.Drawing.Size(904, 617);
             this.Controls.Add(this.BtnImprimer);
             this.Controls.Add(this.lbl_total_general);
             this.Controls.Add(this.label6);
@@ -252,6 +269,7 @@
             this.Name = "FrmFacturation";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Facturation";
+            this.Load += new System.EventHandler(this.FrmFacturation_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txt_code)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_designation)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_prix_unitaire)).EndInit();
@@ -259,6 +277,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txt_client)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_telephone)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListe)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.autoComplete1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -281,5 +300,6 @@
         private System.Windows.Forms.Label lbl_total_general;
         private System.Windows.Forms.Button BtnImprimer;
         private System.Windows.Forms.DataGridView dgvListe;
+        private Syncfusion.Windows.Forms.Tools.AutoComplete autoComplete1;
     }
 }

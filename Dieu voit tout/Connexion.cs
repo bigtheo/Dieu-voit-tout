@@ -15,10 +15,10 @@ namespace Dieu_voit_tout
         {
             MySqlConnectionStringBuilder builder = new MySqlConnectionStringBuilder()
             {
-                Server = "localhost",
-                UserID = "root",
-                Password = "1993",
-                Database = "DieuVoitTout"
+                Server = System.Configuration.ConfigurationManager.AppSettings["serverName"],
+                UserID = System.Configuration.ConfigurationManager.AppSettings["userName"],
+                Password = System.Configuration.ConfigurationManager.AppSettings["password"],
+                Database = System.Configuration.ConfigurationManager.AppSettings["database"]
 
             };
 
@@ -39,7 +39,7 @@ namespace Dieu_voit_tout
             catch (MySqlException ex)
             {
                 System.Windows.Forms.MessageBox.Show(ex.Message);
-
+                new FrmParametres().ShowDialog();
                 return default;
             }
 
@@ -71,6 +71,7 @@ namespace Dieu_voit_tout
                 {
 
                     System.Windows.Forms.MessageBox.Show(ex.Message);
+                    
                     return false;
                 }
 
